@@ -48,9 +48,6 @@ def enum_release(owner, repos):
     result = urllib2.urlopen(URL)
     length = result.headers['content-length']
 
-    #json_dict = json.load(result)
-    #print json_dict
-
     # "tag_name":"x.xx.x"
     re_release = re.compile(r'"tag_name":"(?P<version>.+?)",')
 
