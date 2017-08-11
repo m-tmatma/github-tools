@@ -42,7 +42,7 @@ def enum_release(owner, repos):
     import re
     import json
     
-    # https://api.github.com/repos/owner/repos/releases
+    # https://api.github.com/repos/<owner>/<repos>/releases
     URL = '/'.join(["https://api.github.com/repos", owner, repos, "releases"])
 
     result = urllib2.urlopen(URL)
