@@ -40,7 +40,6 @@ enum releases at github.com and returns them as a list
 def enum_release(owner, repos):
     import urllib2
     import re
-    import json
     
     # https://api.github.com/repos/<owner>/<repos>/releases
     URL = '/'.join(["https://api.github.com/repos", owner, repos, "releases"])
