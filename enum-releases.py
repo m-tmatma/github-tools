@@ -46,7 +46,6 @@ def enum_release(owner, repos):
     URL = '/'.join(["https://api.github.com/repos", owner, repos, "releases"])
 
     result = urllib2.urlopen(URL)
-    length = result.headers['content-length']
 
     # "tag_name":"x.xx.x"
     re_release = re.compile(r'"tag_name":"(?P<version>.+?)",')
